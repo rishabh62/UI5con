@@ -1,0 +1,15 @@
+<View controllerName="ui5con.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Click Counter">
+				<content>
+					<FlexBox height="100px" alignItems="Start" justifyContent="Center">
+						<items>
+							<Button class="sapUiLargeMargin" text="Clicked {counterModel>/count} times" press="onClick" />
+						</items>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</View>
