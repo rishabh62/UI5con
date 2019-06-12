@@ -21,13 +21,10 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
 			</f:profile>
 		</f:ShellBar>
 		
-		<IconTabBar
-			id="idIconTabBarNoIcons"
-			expanded="{device>/isNoPhone}"
-			class="sapUiResponsiveContentPadding">
+		<IconTabBar>
 			<items>
 				<IconTabFilter text="Home">
-					<Table>
+					<Table mode="SingleSelectMaster">
 						<columns>
 							<Column>
 								<Label text="Name"/>
@@ -51,8 +48,32 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
 									<Text text="+91 7773025552"/>
 								</cells>
 							</ColumnListItem>
+							<ColumnListItem>
+								<cells>
+									<Text text="Rishabh"/>
+								</cells>
+								<cells>
+									<Text text="rishabh.gour@evorait.com"/>
+								</cells>
+								<cells>
+									<Text text="+91 7773025552"/>
+								</cells>
+							</ColumnListItem>
+							<ColumnListItem>
+								<cells>
+									<Text text="Rishabh"/>
+								</cells>
+								<cells>
+									<Text text="rishabh.gour@evorait.com"/>
+								</cells>
+								<cells>
+									<Text text="+91 7773025552"/>
+								</cells>
+							</ColumnListItem>
 						</items>
 					</Table>
+					<Button text="Save" type="Accept"/>
+					<Button text="Delete" type="Reject"/>
 				</IconTabFilter>
 				<IconTabFilter text="Settings">
 					<Text text="Settings go here ..." />
