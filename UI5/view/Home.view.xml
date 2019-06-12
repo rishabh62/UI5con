@@ -1,15 +1,65 @@
-<View controllerName="ui5con.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="Click Counter">
-				<content>
-					<FlexBox height="100px" alignItems="Start" justifyContent="Center">
+<View controllerName="ui5con.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
+	
+		<f:ShellBar title="Application Title" 
+					secondTitle="Short description" 
+					homeIcon="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" 
+					showCopilot="true" 
+					showSearch="true" 
+					showNotifications="true" 
+					showProductSwitcher="true" 
+					notificationsNumber="2"
+					width="1000px">
+			<f:menu>
+				<Menu>
+					<MenuItem text="Flight booking" icon="sap-icon://flight" />
+					<MenuItem text="Car rental" icon="sap-icon://car-rental" />
+				</Menu>
+			</f:menu>
+			<f:profile>
+				<f:Avatar initials="UI" />
+			</f:profile>
+		</f:ShellBar>
+		
+		<IconTabBar
+			id="idIconTabBarNoIcons"
+			expanded="{device>/isNoPhone}"
+			class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Home">
+					<Table>
+						<columns>
+							<Column>
+								<Label text="Name"/>
+							</Column>
+							<Column>
+								<Label text="Email"/>
+							</Column>
+							<Column>
+								<Label text="Phone"/>
+							</Column>
+						</columns>
 						<items>
-							<Button class="sapUiLargeMargin" text="Clicked {counterModel>/count} times" press="onClick" />
+							<ColumnListItem>
+								<cells>
+									<Text text="Rishabh"/>
+								</cells>
+								<cells>
+									<Text text="rishabh.gour@evorait.com"/>
+								</cells>
+								<cells>
+									<Text text="+91 7773025552"/>
+								</cells>
+							</ColumnListItem>
 						</items>
-					</FlexBox>
-				</content>
-			</Page>
-		</pages>
-	</App>
+					</Table>
+				</IconTabFilter>
+				<IconTabFilter text="Settings">
+					<Text text="Settings go here ..." />
+				</IconTabFilter>
+				<IconTabFilter text="About">
+					<Text text="About section goes here ..." />
+				</IconTabFilter>
+			</items>
+	</IconTabBar>
 </View>
