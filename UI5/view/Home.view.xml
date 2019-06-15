@@ -1,79 +1,89 @@
 <View controllerName="ui5con.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" 
 xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
 	
-		<f:ShellBar title="Application Title" 
-					secondTitle="Short description" 
-					homeIcon="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" 
+		<f:ShellBar title="Menu" 
+					secondTitle="Product Database" 
+					homeIcon="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png" 
 					showCopilot="true" 
 					showSearch="true" 
 					showNotifications="true" 
 					showProductSwitcher="true" 
-					notificationsNumber="2"
-					width="1000px">
+					notificationsNumber="2">
 			<f:menu>
 				<Menu>
-					<MenuItem text="Flight booking" icon="sap-icon://flight" />
-					<MenuItem text="Car rental" icon="sap-icon://car-rental" />
+					<MenuItem text="Menu Item 1" />
+					<MenuItem text="Menu Item 2" />
 				</Menu>
 			</f:menu>
 			<f:profile>
-				<f:Avatar initials="UI" />
+				<f:Avatar src="sap-icon://person-placeholder"/>
 			</f:profile>
 		</f:ShellBar>
 		
 		<IconTabBar>
 			<items>
 				<IconTabFilter text="Home">
-					<Table mode="SingleSelectMaster">
+					<Table id="table" mode="SingleSelectMaster" busyIndicatorDelay="0">
 						<columns>
 							<Column>
-								<Label text="Name"/>
+								<Label text="Produce Name"/>
 							</Column>
 							<Column>
-								<Label text="Email"/>
+								<Label text="Quantity per unit"/>
 							</Column>
 							<Column>
-								<Label text="Phone"/>
+								<Label text="Unit price"/>
+							</Column>
+							<Column>
+								<Label text="Units in stock"/>
 							</Column>
 						</columns>
 						<items>
 							<ColumnListItem>
 								<cells>
-									<Text text="Rishabh"/>
+									<Text text="Chai"/>
 								</cells>
 								<cells>
-									<Text text="rishabh.gour@evorait.com"/>
+									<Text text="10 boxes x 20 bags"/>
 								</cells>
 								<cells>
-									<Text text="+91 7773025552"/>
-								</cells>
-							</ColumnListItem>
-							<ColumnListItem>
-								<cells>
-									<Text text="Rishabh"/>
+									<Text text="$18.00"/>
 								</cells>
 								<cells>
-									<Text text="rishabh.gour@evorait.com"/>
-								</cells>
-								<cells>
-									<Text text="+91 7773025552"/>
+									<Text text="39"/>
 								</cells>
 							</ColumnListItem>
 							<ColumnListItem>
 								<cells>
-									<Text text="Rishabh"/>
+									<Text text="Aniseed Syrup"/>
 								</cells>
 								<cells>
-									<Text text="rishabh.gour@evorait.com"/>
+									<Text text="12 - 550 ml bottles"/>
 								</cells>
 								<cells>
-									<Text text="+91 7773025552"/>
+									<Text text="$10.00"/>
+								</cells>
+								<cells>
+									<Text text="13"/>
+								</cells>
+							</ColumnListItem>
+							<ColumnListItem>
+								<cells>
+									<Text text="Chang"/>
+								</cells>
+								<cells>
+									<Text text="24 - 12 oz bottles"/>
+								</cells>
+								<cells>
+									<Text text="$19.00"/>
+								</cells>
+								<cells>
+									<Text text="17"/>
 								</cells>
 							</ColumnListItem>
 						</items>
 					</Table>
-					<Button text="Save" type="Accept"/>
-					<Button text="Delete" type="Reject"/>
+					<Button text="Refresh" type="Emphasized" press="onRefresh"/>
 				</IconTabFilter>
 				<IconTabFilter text="Settings">
 					<Text text="Settings go here ..." />
