@@ -23,6 +23,7 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
 		<IconTabBar>
 			<items>
 				<IconTabFilter text="Home">
+				<Button text="Refresh" type="Emphasized" press="onRefresh" icon="sap-icon://refresh"/>
 					<Table id="table" mode="SingleSelectMaster" busyIndicatorDelay="0">
 						<columns>
 							<Column>
@@ -83,7 +84,7 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
 							</ColumnListItem>
 						</items>
 					</Table>
-					<Button text="Refresh" type="Emphasized" press="onRefresh"/>
+					
 				</IconTabFilter>
 				<IconTabFilter text="Settings">
 					<Text text="Settings go here ..." />
