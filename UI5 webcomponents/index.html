@@ -7,65 +7,67 @@
     <title>UI5con</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="./main.js"></script>
+
 </head>
 
-<body style="margin: 0%">
+<body>
 
     <ui5-shellbar id="shellbar" primary-title="Menu" secondary-title="Product Database"
         logo="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png" notification-count="2" show-notifications
         show-product-switch show-co-pilot>
         <ui5-input slot="searchField"></ui5-input>
-        <ui5-shellbar-item id="disc" src="sap-icon://person-placeholder" text="Disconnect"></ui5-shellbar-item>
+        <ui5-shellbar-item src="sap-icon://person-placeholder" text="Disconnect"></ui5-shellbar-item>
         <ui5-li slot="menuItems">Menu Item 1</ui5-li>
         <ui5-li slot="menuItems">Menu Item 2</ui5-li>
     </ui5-shellbar>
 
     <ui5-tabcontainer class="full-width" fixed show-overflow>
-            <ui5-tab text="Home" selected>
-                    <ui5-table id="table">
-                            <ui5-table-column slot="columns" width="25%">
-                                <span style="line-height: 2.5rem" slot="header">Produce Name</span>
-                            </ui5-table-column>
-                        
-                            <ui5-table-column slot="columns" min-width="25%" popin-text="Supplier">
-                                <span style="line-height: 2.5rem" slot="header">Quantity per unit</span>
-                            </ui5-table-column>
-                        
-                            <ui5-table-column slot="columns" min-width="25%" popin-text="Dimensions" demand-popin>
-                                <span style="line-height: 2.5rem" slot="header">Unit price</span>
-                            </ui5-table-column>
-                        
-                            <ui5-table-column slot="columns" min-width="25%" popin-text="Weight" demand-popin>
-                                <span style="line-height: 2.5rem" slot="header">Units in stock</span>
-                            </ui5-table-column>
+        <ui5-tab text="Home" selected>
+            <ui5-button id="refreshBtn" type="Emphasized" icon="sap-icon://refresh">Refresh</ui5-button>
+            <ui5-busyindicator id="busyIndicator" style="width: 100%" size="Medium">
+                <ui5-table id="table">
+                    <ui5-table-column slot="columns" width="25%">
+                        <span style="line-height: 2.5rem" slot="header">Produce Name</span>
+                    </ui5-table-column>
 
-                            <ui5-table-row slot="rows">
-                                <ui5-table-cell style="color: black">Chai</ui5-table-cell>
-                                <ui5-table-cell style="color: black">10 boxes x 20 bags</ui5-table-cell>
-                                <ui5-table-cell style="color: black">$18.00</ui5-table-cell>
-                                <ui5-table-cell style="color: black">39</ui5-table-cell>
-                            </ui5-table-row>
-                            <ui5-table-row slot="rows">
-                                <ui5-table-cell style="color: black">Aniseed Syrup</ui5-table-cell>
-                                <ui5-table-cell style="color: black">12 - 550 ml bottles</ui5-table-cell>
-                                <ui5-table-cell style="color: black">$10.00</ui5-table-cell>
-                                <ui5-table-cell style="color: black">13</ui5-table-cell>
-                            </ui5-table-row>
-                            <ui5-table-row slot="rows">
-                                <ui5-table-cell style="color: black">Chang</ui5-table-cell>
-                                <ui5-table-cell style="color: black">24 - 12 oz bottles</ui5-table-cell>
-                                <ui5-table-cell style="color: black">$19.00</ui5-table-cell>
-                                <ui5-table-cell style="color: black">17</ui5-table-cell>
-                            </ui5-table-row>
+                    <ui5-table-column slot="columns" min-width="25%" popin-text="Supplier">
+                        <span style="line-height: 2.5rem" slot="header">Quantity per unit</span>
+                    </ui5-table-column>
 
-                        </ui5-table>
-                        <ui5-button style="margin-top: 0.5rem" type="Emphasized">Refresh</ui5-button>
-            </ui5-tab>
-            <ui5-tab text="Settings"></ui5-tab>
-            <ui5-tab text="About"></ui5-tab>
+                    <ui5-table-column slot="columns" min-width="25%" popin-text="Dimensions" demand-popin>
+                        <span style="line-height: 2.5rem" slot="header">Unit price</span>
+                    </ui5-table-column>
+
+                    <ui5-table-column slot="columns" min-width="25%" popin-text="Weight" demand-popin>
+                        <span style="line-height: 2.5rem" slot="header">Units in stock</span>
+                    </ui5-table-column>
+
+                    <ui5-table-row slot="rows">
+                        <ui5-table-cell>Chai</ui5-table-cell>
+                        <ui5-table-cell>10 boxes x 20 bags</ui5-table-cell>
+                        <ui5-table-cell>$18.00</ui5-table-cell>
+                        <ui5-table-cell>39</ui5-table-cell>
+                    </ui5-table-row>
+                    <ui5-table-row slot="rows">
+                        <ui5-table-cell>Aniseed Syrup</ui5-table-cell>
+                        <ui5-table-cell>12 - 550 ml bottles</ui5-table-cell>
+                        <ui5-table-cell>$10.00</ui5-table-cell>
+                        <ui5-table-cell>13</ui5-table-cell>
+                    </ui5-table-row>
+                    <ui5-table-row slot="rows">
+                        <ui5-table-cell>Chang</ui5-table-cell>
+                        <ui5-table-cell>24 - 12 oz bottles</ui5-table-cell>
+                        <ui5-table-cell>$19.00</ui5-table-cell>
+                        <ui5-table-cell>17</ui5-table-cell>
+                    </ui5-table-row>
+                </ui5-table>
+            </ui5-busyindicator>
+        </ui5-tab>
+        <ui5-tab text="Settings"></ui5-tab>
+        <ui5-tab text="About"></ui5-tab>
     </ui5-tabcontainer>
 
 </body>
+<script src="./main.js"></script>
 
 </html>
