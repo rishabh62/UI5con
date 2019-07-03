@@ -1,5 +1,5 @@
 <template>
-  <FdTable :headers="headers" :items="items">
+  <FdTable selectionMode="single" :headers="headers" :items="items">
     <template slot="row" slot-scope="{ item }">
       <FdTableRow>
         <FdTableCell>{{ item.ProductName }}</FdTableCell>
@@ -24,19 +24,19 @@ export default {
       {
         ProductName: "Chai",
         QuantityPerUnit: "10 boxes x 20 bags",
-        UnitPrice: "18.0000",
+        UnitPrice: "$18.00",
         UnitsInStock: 39
       },
       {
         ProductName: "Chang",
         QuantityPerUnit: "24 - 12 oz bottles",
-        UnitPrice: "19.0000",
+        UnitPrice: "$19.00",
         UnitsInStock: 17
       },
       {
         ProductName: "Aniseed Syrup",
         QuantityPerUnit: "12 - 550 ml bottles",
-        UnitPrice: "10.0000",
+        UnitPrice: "$10.00",
         UnitsInStock: 13
       }
     ]

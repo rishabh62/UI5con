@@ -3,26 +3,45 @@
     <FdShellBarGroup position="start">
       <FdShellBarLogo
         alt="SAP"
-        src="https://unpkg.com/fiori-fundamentals@1.6.0/dist/images/sap-logo@2x.png"
-        width="48"
-        height="24"
-      />
-      <FdShellBarProduct productTitle="Product Name"/>
+        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png"></FdShellBarLogo>
+      <FdShellBarProduct>
+        <FdShellBarProductMenu>
+          <template #title>Menu</template>
+          <template #default>
+            <FdMenuList>
+              <FdMenuItem @click="itemClicked('a')">Menu Item 1</FdMenuItem>
+              <FdMenuItem>Menu Item 2</FdMenuItem>
+            </FdMenuList>
+          </template>
+        </FdShellBarProductMenu>
+      </FdShellBarProduct>
+      <FdShellBarSubtitle style="font-size:1.2rem">Product Database</FdShellBarSubtitle>
     </FdShellBarGroup>
     <FdShellBarGroup position="end">
       <FdShellBarActions>
         <FdShellBarAction>
           <FdShellBarUserMenu ref="userMenu">
-            <FdMenu>
+            <!-- <FdMenu>
               <FdMenuList>
                 <FdMenuItem @click="closeUserMenu">Settings</FdMenuItem>
                 <FdMenuItem @click="closeUserMenu">Sign out</FdMenuItem>
               </FdMenuList>
-            </FdMenu>
+            </FdMenu> -->
           </FdShellBarUserMenu>
         </FdShellBarAction>
       </FdShellBarActions>
     </FdShellBarGroup>
+    <FdShellBarGroup >
+        <FdShellBarActions>
+          <FdShellBarAction>
+            <FdShellBarProductSwitcher>
+              <FdShellBarProductSwitcherItem>
+
+              </FdShellBarProductSwitcherItem>
+            </FdShellBarProductSwitcher>
+          </FdShellBarAction>
+        </FdShellBarActions>
+      </FdShellBarGroup>
   </FdShellBar>
 </template>
     
@@ -36,22 +55,7 @@ export default {
     }
   },
   data() {
-    return {
-      products: [
-        {
-          src: "images/products/01.png",
-          title: "Fiori"
-        },
-        {
-          src: "images/products/02.png",
-          title: "S/4 HANA Cloud"
-        },
-        {
-          src: "images/products/03.png",
-          title: "Analytics Cloud"
-        }
-      ]
-    };
+    return {};
   },
   computed: {}
 };

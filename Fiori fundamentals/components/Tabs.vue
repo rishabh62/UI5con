@@ -3,7 +3,7 @@
       <FdTabItem label="Home" name="a">
         <RefreshButton @click="onRefresh"></RefreshButton>
         <div id="table">
-        <Table ></Table>
+        <Table ref="tableRef" ></Table>
         </div>
       </FdTabItem>
 
@@ -24,6 +24,7 @@ export default {
     methods:{
         onRefresh: function(oEvent){
             console.log("RefreshButton.$data");
+            debugger;
         }
     },
     data: () => ({ activeTab: "a" }),
